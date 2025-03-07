@@ -1,68 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oummal - Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #00a651, #e0f7f3);
-            font-family: 'Roboto Condensed', Arial, sans-serif;
-            color: #333;
-        }
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/oummal-logo" href="images/oummal-logo-only.png">
 
-        .container {
-            text-align: center;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
 
-        .logo {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            color: #00a651;
-        }
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
 
-        p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            color: #666;
-        }
+  <link rel="stylesheet" href="css/aos.css">
 
-        .highlight {
-            color: #00a651;
-            font-weight: bold;
-        }
+  <link rel="stylesheet" href="css/ionicons.min.css">
 
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #999;
-        }
-    </style>
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Ensure hero section starts below navbar */
+    @media (min-width: 992px) {
+
+      /* Apply only on large screens (≥992px) */
+      .welcome-section {
+        margin-top: 60px;
+        /* Adjust as needed */
+      }
+    }
+
+
+    button:focus,
+    a:focus {
+      outline: none;
+      /* Remove focus outline */
+    }
+
+    .logo-img {
+      width: 115px;
+      /* Default size */
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .logo-img {
+        width: 100px;
+        /* Smaller logo on tablets & phones */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-img {
+        width: 80px;
+        /* Even smaller logo on very small screens */
+      }
+    }
+
+    /* 🔹 Welcome Section Styling */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #259F83, #484848);
+    padding: 50px;
+    color: white;
+    border-bottom: 3px solid #28a745;
+    text-align: left; /* Align text properly */
+}
+
+/* 🔹 Scoped Container */
+.welcome-container {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+}
+
+/* 🔹 Flexbox Layout */
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between text and image */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* 🔹 Text Styling */
+.welcome-text {
+    flex: 1;
+    color: whitesmoke;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    
+}
+
+/* 🔹 Image Styling */
+.welcome-image img {
+    width: 600px; /* Default image size */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 992px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-image img {
+        width: 80%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+    }
+
+    .welcome-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+    
+    /* Heading Styling */
+    .welcome-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* Paragraph Styling */
+    .welcome-text {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    /* Ensure the row behaves as a flexible grid */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Default: 3 cards per row on large screens */
+    .col-md-4 {
+      flex: 1 1 33.333%;
+      /* Ensures each column takes up 1/3 of the row */
+      max-width: 33.333%;
+    }
+
+    /* Responsive: 2 cards per row on tablets */
+    @media (max-width: 768px) {
+      .col-md-4 {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive: 1 card per row on mobile */
+    @media (max-width: 480px) {
+      .col-md-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* Ensure all cards are the same height */
+    .blog-entry {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .welcome-section p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* General Styling */
+.milestones-section {
+    background: #f4f4f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* Category Styling */
+.milestone-category {
+    margin-bottom: 50px;
+}
+
+.milestone-category h2 {
+    font-size: 1.6rem;
+    color: #259F83;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Grid Layout */
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Milestone Cards */
+.milestone-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+    border-left: 5px solid #259F83;
+}
+
+.milestone-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Box */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: #259F83;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+/* Text Styling */
+.milestone-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: bold;
+}
+
+.milestone-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Single-Row Cards */
+.single-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .milestone-category h2 {
+        font-size: 1.4rem;
+    }
+
+    .icon-box {
+        width: 45px;
+        height: 45px;
+        font-size: 1.6rem;
+    }
+
+    .milestone-card {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+  </style>
 </head>
+
 <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <img src="oummall2.png" alt="Oummal Logo" class="logo">
-        <h1>Oummal</h1>
-        <p>We are making major edits <span class="highlight">to our website</span>.</p>
-        <p>Stay tuned!</p>
-        <p>Stay connected with us on our email <span class="highlight">qc@oummal.org</span>.</p>
-        <div class="footer"> 2025 Oummal. All Rights Reserved.</div>
+      <a class="navbar-brand" href="index.html">
+        <img src="images/oummal-logo.png" alt="Oummal Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+  
+          <!-- Dropdown for Programs -->
+          <li class="nav-item dropdown">
+            <a href="programs.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Programs
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="programs/healthcare-sector.html">Healthcare Reform and Patients Rights</a>
+              <a class="dropdown-item" href="programs/maktoum-aid-program.html">Maktoum AID</a>
+              <a class="dropdown-item" href="programs/employment-program.html">Vocational Training</a>
+              <a class="dropdown-item" href="programs/culture-and-literature.html">Arts, Culture & Literature</a>
+              <a class="dropdown-item" href="programs/paws-rescue-program.html">Paws Rescue Program</a>
+            </div>
+          </li>
+  
+          <li class="nav-item"><a href="news.html" class="nav-link">Circulars and News</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+
+  <!-- END nav -->
+
+
+  <!-- Welcome Message Section (Hidden by Default) -->
+  <section id="welcome-message" class="welcome-section">
+    <div class="welcome-container">
+      <div class="welcome-content">
+        <div class="welcome-text">
+          <h1>Welcome!</h1>
+          <p>
+            Oummal is the reflection of a vision driven by a sense of justice and equity. Our mission is to empower
+            people to take ownership of their rights through a bottom-up approach. Since our registration in 2013,
+            Oummal has been dedicated to advancing the rights and well-being of patients, stateless individuals,
+            displaced, youths, and women.
+          </p>
+        </div>
+        <div class="welcome-image">
+          <img src="images/homepage-image.png" alt="Welcome Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <h2 class="mb-4">Our Programs</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="programs/healthcare-sector.html" class="block-20"
+              style="background-image: url('images/healthcare.png');">
+            </a>
+            <div class="text p-4 d-block">
+
+              <h3 class="heading mb-4"><a href="programs/healthcare-sector.html">Healthcare Reform and Patients Rights</a></h3>
+              <p><a href="programs/healthcare-sector.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="programs/maktoum-aid-program.html" class="block-20"
+              style="background-image: url('images/maktoum-aid.png');">
+            </a>
+            <div class="text p-4 d-block">
+
+              <h3 class="heading mb-4"><a href="programs/maktoum-aid-program.html">Maktoum AID</a></h3>
+
+              <p><a href="programs/maktoum-aid-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="programs/employment-program.html" class="block-20"
+              style="background-image: url('images/capacity-building.png');">
+            </a>
+            <div class="text p-4 d-block">
+
+              <h3 class="heading mb-4"><a href="programs/employment-program.html">Vocational Training
+                  </a></h3>
+
+              <p><a href="programs/employment-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="programs/culture-and-literature.html" class="block-20"
+              style="background-image: url('images/ehden-bookfair.png');">
+            </a>
+            <div class="text p-4 d-block">
+
+              <h3 class="heading mb-4"><a href="programs/culture-and-literature.html">Arts, Culture & Literature</a></h3>
+              <p class="time-loc"> <a
+                  href="https://www.google.com/maps/dir//7XR9%2B44W,+Ehden/@34.2903611,35.9266251,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1522031ac47bd159:0xcf5cf4bd34fa45ee!2m2!1d35.9678248!2d34.290368?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"><span><i class="icon-map-o"></i> Al midan - Ehden</span></a></p>
+
+              <p><a href="programs/culture-and-literature.html">View Program <i class="ion-ios-arrow-forward"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="programs/paws-rescue-program.html" class="block-20"
+              style="background-image: url('images/paws.png');">
+            </a>
+            <div class="text p-4 d-block">
+              <h3 class="heading mb-4"><a href="programs/paws-rescue-program.html">Paws Rescue Program</a></h3>
+              <p><a href="programs/paws-rescue-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="milestones-section">
+    <div class="container">
+      <h2 class="section-title">Our Milestones</h2>
+  
+      <!-- Healthcare & Patient Rights -->
+      <div class="milestone-category">
+        <h2>In Healthcare & Patient Rights</h2>
+        <div class="milestone-grid">
+          <div class="milestone-card">
+            <h3>250,000</h3>
+            <p>Hospitalization Grievances Solved</p>
+          </div>
+          <div class="milestone-card">
+            <h3>889,741</h3>
+            <p>Calls answered during COVID-19</p>
+          </div>
+          <div class="milestone-card">
+            <h3>20,000</h3>
+            <p>Medical exceptions ensured for patients with severe conditions</p>
+          </div>
+          <div class="milestone-card">
+            <h3>500,000</h3>
+            <p>Downloads of the MedLeb Patient Guide app</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Statelessness -->
+      <div class="milestone-category">
+        <h2>In Statelessness and Nationality rights</h2>
+        <div class="milestone-grid">
+          <div class="milestone-card">
+            <h3>2,500</h3>
+            <p>Stateless reached with health services</p>
+          </div>
+          <div class="milestone-card">
+            <h3>10</h3>
+            <p>Maktoumeen filled cases</p>
+          </div>
+          <div class="milestone-card">
+            <h3>380</h3>
+            <p>Referred grievances</p>
+          </div>
+          <div class="milestone-card">
+            <h3>8</h3>
+            <p>Partners in the Maktoum Aid Network</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Capacity Building -->
+      <div class="milestone-category">
+        <h2>In Vocational Training</h2>
+        <div class="milestone-grid">
+          <div class="milestone-card">
+            <h3>250</h3>
+            <p>Trained youth in vocational skills</p>
+          </div>
+          <div class="milestone-card">
+            <h3>45%</h3>
+            <p>Job placement rate</p>
+          </div>
+          <div class="milestone-card">
+            <h3>18</h3>
+            <p>Classes</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Arts & Culture -->
+      <div class="milestone-category">
+        <h2>In Arts & Culture</h2>
+        <div class="milestone-grid">
+          <div class="milestone-card">
+            <h3>100</h3>
+            <p>Cultural and artistic events</p>
+          </div>
+          <div class="milestone-card">
+            <h3>80</h3>
+            <p>Influencing personalities sharing their work</p>
+          </div>
+          <div class="milestone-card">
+            <h3>50</h3>
+            <p>Books signings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="ftco-section bg-light">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-5 heading-section ftco-animate text-center">
+          <h2 class="mb-4">Oummal over the years</h2>
+          <p>In 2013, we established Oummal as an NGO with a focus on promoting justice and equity in Lebanon.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 ftco-animate">
+          <div class="carousel-cause owl-carousel">
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2024.jpeg" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2024.jpeg);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2024</h3>
+                  <p>Development of the Maktoum AID network and application for stateless people, service providers and
+                    NGOs and networks
+                    targeting the issue on a multiapproach level.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2023.jpg" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2023.jpg);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2023</h3>
+                  <p>Development and implementation of the MedLeb software to digitalize drug-related procedures at the Ministry of Public Health, enhancing transparency
+                    and efficiency in
+                    Lebanon’s healthcare sector.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2022.jpg" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2022.jpg);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2022</h3>
+                  <p>Management of the PCR sampling operation in Lebanon at the BRHIA airport and at the borders in
+                    cooperation with the
+                    Ministry of Health, the directorate of the airport and the Lebanese University.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2021.jpg" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2021.jpg);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2021</h3>
+                  <p>Management of the National COVID-19 Vaccination Hotline (1214), which successfully handled over
+                    900,000 calls,
+                    addressing various grievances and providing crucial support during the pandemic.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2018.jpg" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2018.jpg);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2018</h3>
+                  <p>Establishment of the Universal Health Coverage National Observatory, a key initiative aimed at
+                    improving health coverage
+                    by mediating between patients, hospitals, and public guarantors.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2017.png" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2017.png);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2017</h3>
+                  <p>Activated the Oummal Capacity building program to address the challenges of youth unemployment and
+                    skill gaps in the job
+                    market. Hundreds of trainees ended up with a job.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cause-entry">
+                <a href="images/2014.png" class="image-popup  justify-content-center align-items-center img "
+                  style="background-image: url(images/2014.png);">
+                  <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                  </div>
+                </a>
+                <div class="text p-3 p-md-4">
+                  <h3>2014</h3>
+                  <p>Launch of the Oummal Mutual Fund, which provided comprehensive health coverage to small business
+                    owners and
+                    self-employed workers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Site Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="about.html" class="py-2 d-block">About Us</a></li>
+              <li><a href="programs.html" class="py-2 d-block">Programs</a></li>
+              <li><a href="news.html" class="py-2 d-block">Circulars and News</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><a href="https://goo.gl/maps/vZHy17P346apmf2S8" target="_blank"><span
+                      class="icon icon-map-marker"></span><span class="text">ZGHARTA, MAIN ROAD, AL MAKHADA, FATHER
+                      SEMAAN DOUAIHY ST., SASSINE AKLEH BUILDING, 1ST FLOOR.</span></a></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">+961 6 669 289</span></a></li>
+                <li><a href="mailto:info@oummal.org"><span class="icon icon-envelope"></span><span
+                      class="text">info@oummal.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
