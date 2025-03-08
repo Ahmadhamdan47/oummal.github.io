@@ -28,6 +28,8 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
 
   <style>
     /* Ensure hero section starts below navbar */
@@ -68,99 +70,103 @@
     }
 
     /* 🔹 Welcome Section Styling */
-.welcome-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #259F83, #484848);
-    padding: 50px;
-    color: white;
-    border-bottom: 3px solid #28a745;
-    text-align: left; /* Align text properly */
-}
+    .welcome-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #000000, #000000);
+      padding: 50px;
+      color: white;
+      border-bottom: 3px solid #505351;
+      text-align: left;
+      /* Align text properly */
+    }
 
-/* 🔹 Scoped Container */
-.welcome-container {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
-    width: 90%;
-    margin: auto;
-}
-
-/* 🔹 Flexbox Layout */
-.welcome-content {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Space between text and image */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-/* 🔹 Text Styling */
-.welcome-text {
-    flex: 1;
-    color: whitesmoke;
-}
-
-.welcome-text h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: whitesmoke;
-}
-
-.welcome-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-    
-}
-
-/* 🔹 Image Styling */
-.welcome-image img {
-    width: 600px; /* Default image size */
-    height: auto;
-    border-radius: 10px;
-}
-
-/* 🔹 Responsive Design */
-@media (max-width: 992px) {
+    /* 🔹 Scoped Container */
     .welcome-container {
-        flex-direction: column;
-        text-align: center;
+      display: flex;
+      align-items: center;
+      max-width: 1000px;
+      width: 90%;
+      margin: auto;
     }
 
+    /* 🔹 Flexbox Layout */
     .welcome-content {
-        flex-direction: column;
-        text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      /* Space between text and image */
+      flex-wrap: wrap;
+      /* Allows wrapping on smaller screens */
     }
 
+    /* 🔹 Text Styling */
     .welcome-text {
-        text-align: center;
+      flex: 1;
+      color: whitesmoke;
     }
 
-    .welcome-image img {
-        width: 80%;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 600px) {
     .welcome-text h1 {
-        font-size: 2rem;
+      font-size: 2.5rem;
+      color: rgb(212, 210, 210);
+      font-family: 'Roboto Condensed', sans-serif;
     }
 
     .welcome-text p {
-        font-size: 1rem;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      text-align: justify;
+      font-family: 'Roboto Condensed', sans-serif;
     }
 
+    /* 🔹 Image Styling */
     .welcome-image img {
+      width: 600px;
+      /* Default image size */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* 🔹 Responsive Design */
+    @media (max-width: 992px) {
+      .welcome-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .welcome-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .welcome-text {
+        text-align: center;
+      }
+
+      .welcome-image img {
+        width: 80%;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .welcome-text h1 {
+        font-size: 2rem;
+      }
+
+      .welcome-text p {
+        font-size: 1rem;
+      }
+
+      .welcome-image img {
         width: 100%;
         max-width: 300px;
+      }
     }
-}
 
 
-    
+
     /* Heading Styling */
     .welcome-heading {
       font-size: 2rem;
@@ -228,122 +234,115 @@
     }
 
     .welcome-section p {
-    text-align: justify;
-    text-justify: inter-word;
-}
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
-/* General Styling */
-.milestones-section {
-    background: #f4f4f7;
-    padding: 60px 20px;
-    text-align: center;
-}
+    /* General Styling */
+    .milestones-section {
+      background: #f4f4f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-.section-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #222;
-}
-
-/* Category Styling */
-.milestone-category {
-    margin-bottom: 50px;
-}
-
-.milestone-category h2 {
-    font-size: 1.6rem;
-    color: #259F83;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-/* Grid Layout */
-.milestone-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Milestone Cards */
-.milestone-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    text-align: center;
-    border-left: 5px solid #259F83;
-}
-
-.milestone-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Icon Box */
-.icon-box {
-    width: 50px;
-    height: 50px;
-    background: #259F83;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-}
-
-/* Text Styling */
-.milestone-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #222;
-    font-weight: bold;
-}
-
-.milestone-card p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.4;
-}
-
-/* Single-Row Cards */
-.single-card {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    /* Category Styling */
+    .milestone-category {
+      margin-bottom: 50px;
     }
 
     .milestone-category h2 {
-        font-size: 1.4rem;
+      font-size: 1.6rem;
+      color: #259F83;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
     }
 
+    /* Grid Layout */
+    .milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Milestone Cards */
+    .milestone-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      text-align: center;
+      border-left: 5px solid #259F83;
+    }
+
+    .milestone-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Icon Box */
     .icon-box {
+      width: 50px;
+      height: 50px;
+      background: #259F83;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+    }
+
+    /* Text Styling */
+    .milestone-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .milestone-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Single-Row Cards */
+    .single-card {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .milestone-category h2 {
+        font-size: 1.4rem;
+      }
+
+      .icon-box {
         width: 45px;
         height: 45px;
         font-size: 1.6rem;
-    }
+      }
 
-    .milestone-card {
+      .milestone-card {
         padding: 15px;
+      }
     }
-}
-
-
-
-
-
-
-
   </style>
 </head>
 
@@ -354,16 +353,16 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/oummal-logo.png" alt="Oummal Logo" class="logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-  
+
           <!-- Dropdown for Programs -->
           <li class="nav-item dropdown">
             <a href="programs.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
@@ -378,7 +377,7 @@
               <a class="dropdown-item" href="programs/paws-rescue-program.html">Paws Rescue Program</a>
             </div>
           </li>
-  
+
           <li class="nav-item"><a href="news.html" class="nav-link">Circulars and News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
@@ -398,7 +397,8 @@
           <h1>Welcome!</h1>
           <p>
             Oummal is the reflection of a vision driven by a sense of justice and equity. Our mission is to empower
-            people to take ownership of their rights through a bottom-up approach. Since our registration in 2013,
+            people to take ownership of their rights through a bottom-up approach.</p>
+          <p>Since our registration in 2013,
             Oummal has been dedicated to advancing the rights and well-being of patients, stateless individuals,
             displaced, youths, and women.
           </p>
@@ -430,7 +430,8 @@
             </a>
             <div class="text p-4 d-block">
 
-              <h3 class="heading mb-4"><a href="programs/healthcare-sector.html">Healthcare Reform and Patients Rights</a></h3>
+              <h3 class="heading mb-4"><a href="programs/healthcare-sector.html">Healthcare Reform and Patients
+                  Rights</a></h3>
               <p><a href="programs/healthcare-sector.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
             </div>
           </div>
@@ -456,7 +457,7 @@
             <div class="text p-4 d-block">
 
               <h3 class="heading mb-4"><a href="programs/employment-program.html">Vocational Training
-                  </a></h3>
+                </a></h3>
 
               <p><a href="programs/employment-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
             </div>
@@ -469,7 +470,8 @@
             </a>
             <div class="text p-4 d-block">
 
-              <h3 class="heading mb-4"><a href="programs/culture-and-literature.html">Arts, Culture & Literature</a></h3>
+              <h3 class="heading mb-4"><a href="programs/culture-and-literature.html">Arts, Culture & Literature</a>
+              </h3>
               <p class="time-loc"> <a
                   href="https://www.google.com/maps/dir//7XR9%2B44W,+Ehden/@34.2903611,35.9266251,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1522031ac47bd159:0xcf5cf4bd34fa45ee!2m2!1d35.9678248!2d34.290368?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
                   target="_blank"><span><i class="icon-map-o"></i> Al midan - Ehden</span></a></p>
@@ -497,7 +499,7 @@
   <section class="milestones-section">
     <div class="container">
       <h2 class="section-title">Our Milestones</h2>
-  
+
       <!-- Healthcare & Patient Rights -->
       <div class="milestone-category">
         <h2>In Healthcare & Patient Rights</h2>
@@ -520,7 +522,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Statelessness -->
       <div class="milestone-category">
         <h2>In Statelessness and Nationality rights</h2>
@@ -543,13 +545,13 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Capacity Building -->
       <div class="milestone-category">
         <h2>In Vocational Training</h2>
         <div class="milestone-grid">
           <div class="milestone-card">
-            <h3>250</h3>
+            <h3>350</h3>
             <p>Trained youth in vocational skills</p>
           </div>
           <div class="milestone-card">
@@ -562,7 +564,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Arts & Culture -->
       <div class="milestone-category">
         <h2>In Arts & Culture</h2>
@@ -625,7 +627,8 @@
                 </a>
                 <div class="text p-3 p-md-4">
                   <h3>2023</h3>
-                  <p>Development and implementation of the MedLeb software to digitalize drug-related procedures at the Ministry of Public Health, enhancing transparency
+                  <p>Development and implementation of the MedLeb software to digitalize drug-related procedures at the
+                    Ministry of Public Health, enhancing transparency
                     and efficiency in
                     Lebanon’s healthcare sector.</p>
 
@@ -736,7 +739,6 @@
             <ul class="list-unstyled">
               <li><a href="index.html" class="py-2 d-block">Home</a></li>
               <li><a href="about.html" class="py-2 d-block">About Us</a></li>
-              <li><a href="programs.html" class="py-2 d-block">Programs</a></li>
               <li><a href="news.html" class="py-2 d-block">Circulars and News</a></li>
               <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
             </ul>
