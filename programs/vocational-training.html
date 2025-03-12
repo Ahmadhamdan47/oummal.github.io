@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vocational Training</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/oummal-logo" href="../images/oummal-logo-only.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link rel="stylesheet" href="../css/aos.css">
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+
+    #pdf-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.pdf-page {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.pdf-page:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+    /* Hides paragraphs initially */
+    .content {
+      display: none;
+    }
+
+
+    @media (min-width: 992px) {
+
+      /* Apply only on large screens (≥992px) */
+      .ftco-section {
+        margin-top: 80px;
+        /* Adjust as needed */
+      }
+    }
+
+    /* Reduce section gaps */
+    .ftco-section {
+      padding: 20px 0;
+      /* Reduce top & bottom padding */
+    }
+
+    /* Reduce space between sections */
+    .col-md-8>div {
+      margin-bottom: 10px;
+      /* Less gap between sections */
+    }
+
+    /* Make h2 and button tighter */
+    h2 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+      /* Reduce bottom spacing */
+    }
+
+    /* Remove extra margin above h2 */
+    h2.mb-3.mt-5 {
+      margin-top: 30px !important;
+    }
+
+    /* Ensure button is aligned */
+    .toggle-btn {
+      padding-top: 5px;
+      padding-left: 5px;
+      font-size: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      color: #259F83;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar-box {
+      margin-bottom: 15px;
+      /* Reduce spacing between sidebar items */
+    }
+
+    /* Gallery spacing adjustments */
+    .ftco-gallery .container {
+      padding-top: 20px;
+    }
+
+    h3 {
+      font-size: 25px;
+      /* Slightly smaller for a clear hierarchy */
+      font-weight: 400;
+      /* Lighter weight for a subtitle feel */
+      margin-top: 0;
+      /* Remove extra spacing */
+      color: #555;
+      /* Subtle color to differentiate from h2 */
+    }
+
+    /* Style the vaccination list */
+    .vaccination-list {
+      list-style-type: none;
+      /* Remove default bullets */
+      padding: 0;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .vaccination-list>li {
+      margin-bottom: 15px;
+      /* Space between categories */
+      font-weight: bold;
+    }
+
+    .vaccination-list ul {
+      list-style-type: disc;
+      /* Add bullets for sub-items */
+      margin-left: 20px;
+      font-weight: normal;
+    }
+
+    .vaccination-list ul li {
+      margin-bottom: 5px;
+    }
+
+    .arrow-right::after {
+      content: "\203A";
+      /* › Non-emoji right arrow */
+      font-size: 30px;
+      display: inline-block;
+      font-family: sans-serif;
+      /* Prevents emoji rendering */
+    }
+
+    .arrow-down::after {
+      content: "\2039";
+      /* ‹ Non-emoji down arrow (flipped style of ›) */
+      font-size: 30px;
+      display: inline-block;
+      font-family: sans-serif;
+      /* Prevents emoji rendering */
+      transform: rotate(270deg);
+      /* Rotates the right arrow into a down arrow */
+    }
+
+    .arrow-right,
+    .arrow-down {
+      outline: none;
+      /* Removes black outline */
+      border: none;
+      /* Ensures no border appears */
+    }
+
+    button:focus,
+    a:focus {
+      outline: none;
+      /* Remove focus outline */
+    }
+
+    button:focus,
+    a:focus {
+      outline: none;
+      /* Remove focus outline */
+    }
+
+/* Ensure the gallery section takes full width */
+.ftco-gallery .container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+/* Fix flex container to wrap properly */
+.d-md-flex {
+    display: flex;
+    flex-wrap: wrap; /* Ensures images don’t get cut off */
+    justify-content: center; /* Centers images */
+    gap: 10px; /* Adds spacing between images */
+}
+
+/* Ensure each image link takes full height */
+.gallery {
+    flex: 1; /* Allows images to expand properly */
+    min-width: 300px; /* Ensures images don’t shrink too much */
+    max-width: 400px; /* Adjust size as needed */
+    height: 300px; /* Ensures full visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure the background image fully fits */
+.img {
+    width: 100%;
+    height: 100%;
+    background-size: contain; /* Ensures the entire image is visible */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/oummal-logo.png" alt="Oummal Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
+
+          <!-- Dropdown for Programs -->
+          <li class="nav-item active dropdown">
+            <a href="programs.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Programs
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="healthcare-sector.html">Healthcare Reform and Patients Rights</a>
+              <a class="dropdown-item" href="maktoum-aid-program.html">Maktoum AID</a>
+              <a class="dropdown-item" href="vocational-training.html">Vocational Training</a>
+              <a class="dropdown-item" href="culture-and-literature.html">Arts, Culture & Literature</a>
+              <a class="dropdown-item" href="paws-rescue-program.html">Paws Rescue Program</a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="../news.html" class="nav-link">Circulars and News</a></li>
+          <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+
+  <section class="ftco-section ftco-degree-bg">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-8 ftco-animate">
+          <div>
+            <h2 class="mb-3 mt-5">Vocational Training and Improved Employability
+              <button class="toggle-btn"></button>
+            </h2>
+
+            <div class="content">
+              <h3>
+                Oummal, successfully implemented the "Vocational training and Improved Employability" project aimed at training
+                unemployed youth in vocational skills to enhance their chances of entering the job market. The project focused on four
+                main vocational tracks: Nurse Assistant, Cook Assistant, Pharmacist Assistant, and Administrative Assistant.
+              </h3>
+              <br>
+              <p><b>Outcomes and Impact</b>
+              </p>
+              <p><strong>1. Training Completion & Skill Development</strong></p>
+              <ol>
+                <li>A total of 65 trainees successfully completed the three-month vocational training.</li>
+                <li>Each trainee received 192 hours of theoretical and practical training in their respective fields.</li>
+                <li>Theoretical sessions were supplemented with practical internships at hospitals, pharmacies, restaurants, and
+                  administrative offices.</li>
+              </ol>
+
+              <p><strong>2. Employment and Job Placement</strong></p>
+              <ol>
+                <li>30 trainees secured immediate employment upon completing the program:</li>
+                <ul>
+                  <li>10 Nurse Assistants placed in hospitals and medical centers.</li>
+                  <li>7 Cook Assistants employed in restaurants and catering businesses.</li>
+                  <li>7 Pharmacist Assistants recruited by local pharmacies.</li>
+                  <li>6 Administrative Assistants found jobs in offices and medical facilities.</li>
+                </ul>
+                <li>Oummal’s partnership with local businesses and organizations played a key role in facilitating job placements.
+                </li>
+              </ol>
+
+              <p><strong>3. Increased Employability and Career Prospects</strong></p>
+              <ol>
+                <li>Many participants, despite not securing immediate jobs, gained <b>valuable experience</b> and practical skills, improving
+                their long-term employability.</li>
+                <li>Several trainees planned to pursue further education or specialized training in their respective fields.</li>
+              </ol>
+              <p><strong>4. Social and Economic Impact</strong></p>
+              <ol>
+                <li>The program provided a pathway for youth, including school dropouts and unemployed individuals, to enter the workforce.</li>
+                <li>The project contributed to reducing unemployment rates in Zgharta and surrounding areas.</li>
+                <li>It empowered displaced individuals by equipping them with market-relevant skills, increasing their potential for
+                self-sufficiency.</li>
+              </ol>
+
+              <p><strong>5. Sustainability and Future Prospects</strong></p>
+              <ol>
+                <li>Due to the success of this program, Oummal established strong relationships with training venues, employers, and
+                trainees.</li>
+                <li>There is a high potential for repeating and expanding the program to include more trainees and additional courses.</li>
+                <li>The project created a model for vocational training that can be replicated in other regions with similar employment
+                challenges.</li>
+              </ol>
+
+              <p>
+                The "Vocational Training and Improved Employability" project successfully addressed employment challenges by equipping
+                participants with vocational skills in high-demand sectors. The combination of theoretical learning, hands-on training,
+                and job placement assistance resulted in tangible employment opportunities for many trainees. Given its positive impact,
+                Oummal is committed to continuing and expanding vocational training efforts to support more job seekers in the future.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="mb-3 mt-5">Vocational Training & Employment Initiative
+              <button class="toggle-btn"></button>
+            </h2>
+          
+            <div class="content">
+              <h3>Oummal launched a structured vocational training program to support unemployed Lebanese youth by providing
+                practical skills in high-demand trades.</h3>
+          
+              <p>Each training session spanned three months, combining <b>25% theoretical learning</b> and <b>75% hands-on
+                  experience</b>. Courses were led by seasoned professionals with over seven years of industry expertise, and
+                trainees received practical instruction in real work environments, ensuring job readiness.</p>
+          
+              <p>The training was hosted at <b>Tony Frenjieh Complementary Public School, Zgharta</b>, with practical workshops
+                conducted in collaboration with local businesses.</p>
+          
+              <br>
+              <p><b>Training Fields:</b></p>
+              <ul>
+                <li>Ironworking (حدادة فرنجي)</li>
+                <li>Concrete Work (نجار باطون)</li>
+                <li>Plumbing (سمكري)</li>
+                <li>Gypsum Work (جفصين)</li>
+              </ul>
+          
+              <br>
+              <p><b>Project Impact & Achievements</b></p>
+              <ul>
+                <li><b>Total Youth Trained:</b> 240 participants across multiple training cycles</li>
+                <li><b>Job Placement Rate:</b> 62% of graduates secured employment within six months</li>
+                <li><b>Internships & Apprenticeships:</b> 180+ trainees gained work experience during the program</li>
+                <li><b>Industry Partnerships:</b> Collaborations with 15+ local businesses for on-the-job training</li>
+                <li><b>Community Engagement:</b> Over 1,500 applications received, showcasing strong demand</li>
+              </ul>
+          
+              <p>Through direct connections with employers, our graduates entered the workforce with confidence, filling essential
+                roles in construction, plumbing, and ironworking. Many of them progressed to full-time employment,
+                apprenticeships, or even self-employment, contributing to local economic growth.</p>
+          
+              <br>
+              <p><b>Key Outcomes</b></p>
+              <ul>
+                <li><b>Increased Employment Opportunities:</b> Over 150 young men transitioned into stable jobs.</li>
+                <li><b>Skill Development & Certification:</b> Trainees gained nationally recognized vocational expertise.</li>
+                <li><b>Economic Empowerment:</b> Families benefited from improved financial stability.</li>
+                <li><b>Sustained Industry Growth:</b> Strengthened the local labor force with skilled workers.</li>
+              </ul>
+          
+              <p>Beyond individual success, Oummal’s initiative has had a lasting social and economic impact by reducing
+                unemployment, fostering self-sufficiency, and promoting vocational careers as viable and respectable paths for
+                young men.</p>
+          
+            </div>
+          </div>
+
+
+          <div>
+            <h2 class="mb-3 mt-5">Oummal Mutual Fund
+              <button class="toggle-btn"></button>
+            </h2>
+          
+            <div class="content">
+              <h3>Providing Healthcare Coverage for Small Business Owners & Self-Employed Workers</h3>
+          
+              <p>The Oummal Mutual Fund has successfully achieved its objective of addressing the healthcare needs of small
+                business owners, self-employed workers, and their families, effectively bridging the social gap caused by the lack
+                of comprehensive health coverage.</p>
+          
+              <p>The provided coverage is robust, encompassing <b>100% coverage for hospitalization fees</b> and a noteworthy
+                <b>50% immediate discount</b> on external examinations, laboratory tests, and emergency room photos. This
+                supplementary hospitalization program complements the existing coverage offered by the Ministry of Public Health,
+                ensuring a comprehensive safety net for the beneficiaries.</p>
+          
+              <p>The coverage extended to a substantial <b>15 million Lebanese pounds annually</b>, providing a significant
+                financial buffer for medical expenses. The network includes prominent healthcare institutions, such as:</p>
+              <ul>
+                <li><b>Centre Hospitalier du Nord (CHN)</b></li>
+                <li><b>Saydet Zgharta Hospital</b> in Zgharta District</li>
+                <li><b>Al-Khair Hospital</b> in the Minieh-Dennieh District</li>
+              </ul>
+          
+              <br>
+              <h3>Subscription Model & Eligibility</h3>
+              <p>The subscription model is structured to accommodate various family sizes, with monthly fees set as follows:</p>
+              <ul>
+                <li><b>35,000 Lebanese pounds</b> for an individual</li>
+                <li><b>55,000 Lebanese pounds</b> for a family of two</li>
+                <li><b>70,000 Lebanese pounds</b> for a family of three to four</li>
+                <li><b>90,000 Lebanese pounds</b> for a family of five or more</li>
+              </ul>
+              <p><i>(Children must not exceed 24 years of age to be included in the family plan.)</i></p>
+          
+              <p>Subscriptions are conveniently paid in <b>four installments</b>, spaced every three months, through transactions
+                into Oummal's designated bank account at the Lebanese Credit Bank or at its offices.</p>
+          
+              <p><b>Eligibility:</b> To qualify for membership, individuals must not already be benefiting from health coverage
+                provided by any public or private insurance agency.</p>
+          
+              <br>
+              <h3>Enrollment Process</h3>
+              <p>To join the Oummal Mutual Fund, applicants must submit a filled membership application along with the following
+                required documents:</p>
+              <ul>
+                <li><b>For single individuals:</b> A copy of the ID card or an individual registration document.</li>
+                <li><b>For married individuals:</b> Copies of ID cards or a family registration document.</li>
+              </ul>
+          
+              <br>
+              <h3>Impact & Achievements</h3>
+              <p>The impact of the Oummal Mutual Fund is evident in its enrollment figures:</p>
+              <ul>
+                <li><b>Total Enrolled Beneficiaries:</b> 240 individuals</li>
+                <li><b>Total Families Covered:</b> Over 45 families</li>
+              </ul>
+          
+              <p>This robust enrollment underscores the program's success in meeting the healthcare needs of the targeted
+                population, providing financial security and access to quality healthcare services.</p>
+            </div>
+          </div>
+
+
+
+        </div> <!-- .col-md-8 -->
+        <div class="col-md-4 sidebar ftco-animate">
+          <div class="sidebar-box ftco-animate">
+            <h3>Other Programs</h3>
+
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(../images/healthcare.png);" href="healthcare-sector.html"></a>
+              <div class="text">
+                <h3 class="heading"><a href="healthcare-sector.html">Healthcare Sector and Patient Rights Program</a>
+                </h3>
+                <div class="meta">
+                  <p><a href="healthcare-sector.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+                  <div><span class=""></span></div>
+                  <div><span class=""></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(../images/maktoum-aid.png);"
+                href="maktoum-aid-program.html"></a>
+              <div class="text">
+                <h3 class="heading"><a href="maktoum-aid-program.html">Maktoum AID Program</a></h3>
+                <div class="meta">
+                  <p><a href="maktoum-aid-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+                  <div><span class=""></span></div>
+                  <div><span class=""></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(../images/paws.png);"
+                href="paws-rescue-program.html"></a>
+              <div class="text">
+                <h3 class="heading"><a href="paws-rescue-program.html">Paws Rescue Program</a></h3>
+                <div class="meta">
+                  <p><a href="paws-rescue-program.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+                  <div><span class=""></span></div>
+                  <div><span class=""></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(../images/ehden-bookfair.png);"
+                href="culture-and-literature.html"></a>
+              <div class="text">
+                <h3 class="heading"><a href="culture-and-literature.html">Culture & Literature</a></h3>
+                <div class="meta">
+                  <p><a href="culture-and-literature.html">View Program <i class="ion-ios-arrow-forward"></i></a></p>
+                  <div><span class=""></span></div>
+                  <div><span class=""></span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> <!-- .section -->
+
+  <section class="ftco-section ftco-gallery">
+    <div class="container">
+      <div class="d-md-flex">
+        <a href="../images/vocational-01.jpg"
+          class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+          style="background-image: url(../images/vocational-01.jpg);">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="icon-search"></span>
+          </div>
+        </a>
+        <a href="../images/vocational-02.jpg"
+          class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+          style="background-image: url(../images/vocational-02.jpg);">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="icon-search"></span>
+          </div>
+        </a>
+        <a href="../images/vocational-03.jpg"
+          class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+          style="background-image: url(../images/vocational-03.jpg);">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="icon-search"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+<section class="ftco-section ftco-gallery">
+  <div class="container">
+    <div id="pdf-gallery" class="d-md-flex">
+      <!-- PDF pages will be loaded here -->
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Site Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="../index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="../about.html" class="py-2 d-block">About Us</a></li>
+              <li><a href="../news.html" class="py-2 d-block">Circulars and News</a></li>
+              <li><a href="../contact.html" class="py-2 d-block">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><a href="https://goo.gl/maps/vZHy17P346apmf2S8" target="_blank"><span
+                      class="icon icon-map-marker"></span><span class="text">ZGHARTA, MAIN ROAD, AL MAKHADA, FATHER
+                      SEMAAN DOUAIHY ST., SASSINE AKLEH BUILDING, 1ST FLOOR.</span></a></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">+961 6 669 289</span></a></li>
+                <li><a href="mailto:info@oummal.org"><span class="icon icon-envelope"></span><span
+                      class="text">info@oummal.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/bootstrap-datepicker.js"></script>
+  <script src="../js/jquery.timepicker.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+  <script>
+    // Select all buttons
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(button => {
+      button.classList.add("arrow-right"); // Set initial arrow class
+      const h2 = button.parentElement;
+
+      h2.addEventListener('click', function () {
+        const content = h2.nextElementSibling;
+        const isExpanded = content.style.display === "block";
+
+        content.style.display = isExpanded ? "none" : "block";
+        button.classList.toggle("arrow-down", !isExpanded);
+        button.classList.toggle("arrow-right", isExpanded);
+      });
+    });
+
+
+
+
+
+
+  </script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const pdfUrl = "/images/brochure.pdf"; // Replace with your actual PDF file path
+    const pdfGallery = document.getElementById("pdf-gallery");
+
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+    loadingTask.promise.then(pdf => {
+      for (let i = 1; i <= pdf.numPages; i++) {
+        pdf.getPage(i).then(page => {
+          const scale = 1.5;
+          const viewport = page.getViewport({scale: scale});
+
+          const canvas = document.createElement("canvas");
+          canvas.classList.add("pdf-page");
+          const context = canvas.getContext("2d");
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          // Wrap the canvas inside a clickable link
+          const link = document.createElement("a");
+          link.href = pdfUrl; // Open the full PDF file
+          link.target = "_blank"; // Open in a new tab
+          link.style.display = "block"; // Ensure it's clickable
+          link.appendChild(canvas);
+          pdfGallery.appendChild(link);
+
+          const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+          };
+          page.render(renderContext);
+        });
+      }
+    }).catch(error => {
+      console.error("Error loading PDF:", error);
+    });
+  });
+
+</script>
+
+
+</body>
+
+</html>
